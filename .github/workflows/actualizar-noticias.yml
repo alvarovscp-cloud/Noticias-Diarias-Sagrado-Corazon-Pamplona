@@ -1,0 +1,69 @@
+name: Actualizar noticias y publicar
+
+on:
+  schedule:
+    - cron: "30 5 * * 1-5"
+    - cron: "30 7 * * 1-5"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Hora de España
+        shell: powershell
+        run: Set-TimeZone -Id "Romance Standard Time"
+
+      - name: Generar la edición del día
+        shell: powershell
+        run: ./update-news.ps1 -NoOpen
+
+      - name: Guardar index.html generado
+        uses: actions/upload-artifact@v4
+        with:
+          name: index-html
+          path: index.html
+
+  publicar:
+    needs: generar
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: index-html
+          path: generado
+
+      - name: Preparar la web
+        run: |
+          mkdir _site
+          rsync -a --exclude='.git' --exclude='.github' --exclude='_site' --exclude='generado' \
+                --exclude='*.ps1' --exclude='*.bat' --exclude='LEEME.txt' ./ _site/
+          cp generado/index.html _site/index.html
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Publicar
+        id: despliegue
+        uses: actions/deploy-pages@v4
