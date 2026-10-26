@@ -2,8 +2,12 @@ name: Actualizar noticias y publicar
 
 on:
   schedule:
-    - cron: "30 5 * * 1-5"
-    - cron: "30 7 * * 1-5"
+    # Todos los días de la semana (el último * significa "cualquier día").
+    # Hora UTC. Cubre horario de invierno y de verano en España.
+    - cron: "30 5 * * *"   # 7:30 en verano  (6:30 en invierno)
+    - cron: "30 6 * * *"   # 7:30 en invierno (8:30 en verano)
+    - cron: "0 6 * * *"    # 8:00 en verano  (7:00 en invierno)
+    - cron: "0 7 * * *"    # 8:00 en invierno (9:00 en verano)
   workflow_dispatch:
   push:
     branches: [main]
