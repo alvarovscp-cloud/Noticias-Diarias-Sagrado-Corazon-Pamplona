@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hoy en Pamplona - 26 de octubre de 2026</title>
+  <meta name="description" content="Selección de las noticias más importantes del día en Pamplona, España y el mundo. Viernes, 23 de octubre de 2026.">
+  <meta name="theme-color" content="#b40d31">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Hoy en Pamplona">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/webp" href="https://pamplona.fesofiabarat.es/wp-content/uploads/yootheme/cache/bb/Solo-Logo-Mediano-bba5bf9a.webp">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<style>
+/* =========================================================
+   Hoy en Pamplona — edición 23.10.2026
+   Paleta y tipografías inspiradas en el Colegio Sagrado
+   Corazón Pamplona (rojo #b40d31, blanco y Open Sans).
+   ========================================================= */
+
+:root {
+  --red: #b40d31;
+  --red-dark: #8d0a26;
+  --red-wash: #fbf1f3;
+  --ink: #1b1717;
+  --muted: #6f6766;
+  --soft: #948b8a;
+  --line: #eae4e4;
+  --line-dark: #d9d0d0;
+  --paper: #ffffff;
+  --wash: #fcfafa;
+  --display: "Raleway", "Open Sans", "Segoe UI", system-ui, sans-serif;
+  --body: "Open Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --wrap: 1180px;
+  --gutter: 40px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--red); color: #fff; }
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; height: auto; }
+
+p { margin: 0; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 100;
+  padding: 10px 16px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+}
+.skip-link:focus { top: 12px; }
+
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* ---------- Cabecera ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 3px solid var(--red);
+  border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+}
+
+.header-inner {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  height: 78px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.brand img {
+  display: block;
+  width: auto;
+  height: 44px;
+}
+
+.tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+.tab-count {
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: #f3e7ea;
+  color: var(--red);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.tab[aria-selected="true"] .tab-count {
+  background: var(--red);
+  color: #fff;
+}
+
+/* ---------- Portada ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 92px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero .wrap { position: relative; z-index: 1; }
+
+.hero-date {
+  position: absolute;
+  right: 24px;
+  top: 44px;
+  z-index: 0;
+  color: #f9f1f2;
+  font-family: var(--display);
+  font-size: 156px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.07em;
+  pointer-events: none;
+  user-select: none;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+.kicker::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--red);
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 22px 0 24px;
+  font-family: var(--display);
+  font-size: clamp(40px, 6.6vw, 70px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+.hero h1 em {
+  color: var(--red);
+  font-style: normal;
+}
+
+.lede {
+  max-width: 610px;
+  color: #57504f;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 26px;
+  margin-top: 30px;
+  color: var(--soft);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero-meta strong { color: var(--ink); font-weight: 700; }
+
+/* ---------- Selector de fuentes ---------- */
+
+.source-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.source-filter label {
+  color: var(--soft);
+}
+.source-filter select {
+  padding: 7px 14px;
+  border: 1px solid var(--line-dark);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: border-color 0.18s ease;
+}
+.source-filter select:hover { border-color: var(--red); }
+.source-filter select:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* ---------- Paneles ---------- */
+
+.panels { padding-bottom: 24px; }
+
+.panel {
+  padding: 58px 0 36px;
+  scroll-margin-top: 96px;
+}
+.panel:focus,
+.panel:focus-visible { outline: none; }
+
+.js .panel { display: none; }
+.js .panel.is-active {
+  display: block;
+  animation: panel-in 0.4s ease both;
+}
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.panel-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 42px;
+  padding-top: 18px;
+  border-top: 2px solid var(--ink);
+}
+
+.panel-tag {
+  margin-bottom: 8px;
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.panel h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.panel-intro {
+  max-width: 540px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.panel-count {
+  flex: 0 0 auto;
+  padding-bottom: 6px;
+  color: var(--soft);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------- Noticia principal ---------- */
+
+.lead {
+  margin-bottom: 52px;
+  padding: 4px 0 4px 28px;
+  border-left: 3px solid var(--red);
+}
+
+.lead-label {
+  margin-bottom: 13px;
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.lead h3 {
+  max-width: 940px;
+  margin: 0 0 16px;
+  font-family: var(--display);
+  font-size: clamp(29px, 3.7vw, 42px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.lead h3 a { transition: color 0.18s ease; }
+.lead h3 a:hover { color: var(--red); }
+
+.lead > p:not(.lead-label):not(.meta) {
+  max-width: 780px;
+  color: #514a49;
+  font-size: 17px;
+  line-height: 1.68;
+}
+
+/* ---------- Rejilla ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 56px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 0 28px;
+  border-top: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin-bottom: 9px;
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-family: var(--display);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+}
+.card h3 a { transition: color 0.18s ease; }
+.card h3 a:hover { color: var(--red); }
+
+.card > p:not(.eyebrow):not(.meta) {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.68;
+}
+
+/* ---------- Metadatos ---------- */
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--soft);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.lead .meta { padding-top: 18px; }
+
+.meta .source {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #cfc6c6;
+}
+
+/* ---------- Pie ---------- */
+
+.site-footer {
+  margin-top: 36px;
+  padding: 42px 0 58px;
+  background: var(--wash);
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+.footer-brand img { margin-top: 2px; opacity: 0.9; }
+
+.footer-title {
+  margin-bottom: 5px;
+  font-family: var(--display);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-note {
+  max-width: 430px;
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.65;
+}
+.footer-note + .footer-note { margin-top: 6px; }
+.footer-note a {
+  color: var(--red);
+  border-bottom: 1px solid rgba(180, 13, 49, 0.25);
+  transition: border-color 0.18s ease;
+}
+.footer-note a:hover { border-bottom-color: var(--red); }
+
+.footer-sources { max-width: 460px; }
+
+/* ---------- Adaptación ---------- */
+
+@media (max-width: 1380px) {
+  .hero-date { display: none; }
+}
+
+@media (max-width: 900px) {
+  :root { --gutter: 28px; }
+
+  .hero { padding: 66px 0 48px; }
+
+  .grid { column-gap: 36px; }
+  .footer-inner { flex-direction: column; gap: 24px; }
+}
+
+@media (max-width: 720px) {
+  :root { --gutter: 20px; }
+
+  .header-inner {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding-top: 14px;
+    padding-bottom: 0;
+  }
+  .brand { justify-content: flex-start; padding-bottom: 6px; }
+  .brand img { height: 38px; }
+
+  .tabs {
+    justify-content: stretch;
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .tab {
+    flex: 1 1 0;
+    justify-content: center;
+    gap: 5px;
+    height: 44px;
+    padding: 0 4px;
+    font-size: 10px;
+    letter-spacing: 0.09em;
+  }
+  .tab-count { display: none; }
+
+  .hero { padding: 44px 0 36px; }
+  .hero h1 {
+    margin-top: 18px;
+    font-size: clamp(34px, 9vw, 40px);
+    letter-spacing: -0.04em;
+  }
+  .hero h1 br { display: none; }
+  .kicker { gap: 9px; font-size: 9.5px; letter-spacing: 0.11em; }
+  .kicker::before { width: 22px; }
+  .hero-date { display: none; }
+  .lede { font-size: 16px; }
+  .hero-meta { gap: 8px 16px; margin-top: 24px; font-size: 10px; }
+
+  .source-filter { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .source-filter select { width: 100%; }
+
+  .panel { padding-top: 42px; }
+  .panel-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .panel-count { padding-bottom: 0; }
+
+  .lead {
+    padding-left: 18px;
+    margin-bottom: 38px;
+  }
+  .lead > p:not(.lead-label):not(.meta) { font-size: 16px; }
+
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 20px 0 24px; }
+  .card h3 { font-size: 20px; }
+
+  .site-footer { margin-top: 8px; padding: 34px 0 46px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+</style>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Hoy en Pamplona, inicio">
+        <img src="https://pamplona.fesofiabarat.es/wp-content/uploads/yootheme/cache/72/Logo-con-nombre-Pamplona-72c681ba.webp" alt="Colegio Sagrado Corazón Pamplona" width="259" height="60">
+      </a>
+
+      <nav class="tabs" role="tablist" aria-label="Categorías de noticias">
+        <a class="tab" id="tab-pamplona" role="tab" aria-selected="true" aria-controls="pamplona" href="#pamplona">
+          Pamplona <span class="tab-count" data-count="pamplona">11</span>
+        </a>
+        <a class="tab" id="tab-espana" role="tab" aria-selected="false" aria-controls="espana" href="#espana" tabindex="-1">
+          España <span class="tab-count" data-count="espana">11</span>
+        </a>
+        <a class="tab" id="tab-mundial" role="tab" aria-selected="false" aria-controls="mundial" href="#mundial" tabindex="-1">
+          Mundial <span class="tab-count" data-count="mundial">11</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="wrap">
+        <span class="hero-date" aria-hidden="true">26.10</span>
+        <p class="kicker" id="edition-kicker">Lunes, 26 de octubre de 2026 - Pamplona</p>
+        <h1 id="titulo">La actualidad del día, <br>en <em>tres miradas</em>.</h1>
+        <p class="lede">Una selección de las noticias más importantes de Pamplona, España y el mundo, reunidas en una sola página. Lo esencial para entender la jornada en pocos minutos.</p>
+        <p class="hero-meta">
+          <span><strong id="total-count">33</strong> noticias</span>
+          <span><strong id="source-count">5</strong> fuentes</span>
+          <span>Edición de las <strong id="edition-time">10:00</strong> h</span>
+        </p>
+
+        <div class="source-filter" id="source-filter-wrap">
+          <label for="source-filter">Filtrar por fuente:</label>
+          <select id="source-filter" aria-label="Filtrar noticias por fuente">
+            <option value="all">Todas las fuentes</option>
+			            <option value="Noticias de Navarra">Noticias de Navarra</option>
+            <option value="Diario de Navarra">Diario de Navarra</option>
+            <option value="El Mundo">El Mundo</option>
+            <option value="El Pais">El País</option>
+            <option value="RTVE">RTVE</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap panels">
+
+      <!-- PAMPLONA -->
+      <section class="panel is-active" id="pamplona" role="tabpanel" aria-labelledby="tab-pamplona" tabindex="-1">
+        <header class="panel-head">
+          <div>
+            <p class="panel-tag">01 · Local</p>
+            <h2>Pamplona</h2>
+            <p class="panel-intro">La actualidad de la capital navarra, ordenada de mayor a menor interés.</p>
+          </div>
+          <p class="panel-count" data-count="pamplona">11 noticias</p>
+        </header>
+
+        <!-- AUTO:PAMPLONA:START -->
+        <article class="lead" data-source="Diario de Navarra">
+          <p class="lead-label">Lo mas importante</p>
+          <h3><a href="https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/10/26/heridas-abiertas-desahucio-me-metia-almohada-boca-no-me-escucharan-llorar-839775-16.html" target="_blank" rel="noopener">Las heridas abiertas de un desahucio: &quot;Me met&#237;a una almohada en la boca para que no me escucharan llorar&quot;</a></h3>
+          <p>Cuatro vecinos de Pamplona que perdieron sus viviendas tras la crisis inmobiliaria de 2008 se re&#250;nen con Tere Gonz&#225;lez y Mikel Otazu, antiguos integrantes de la Plataforma de Afectados por la Hipoteca (PAH) ...</p>
+          <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-26T05:00:00+01:00">05:00 h</time><span class="dot"></span><span>Vivienda</span></p>
+        </article>
+
+        <div class="grid">
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Economia</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/10/26/pamplones-contribuye-desarrollo-navarra-bruselas-he-hecho-amigos-lugares-no-hubiera-sabido-poner-mapa-839763-16.html" target="_blank" rel="noopener">El pamplon&#233;s que contribuye al desarrollo de Navarra desde Bruselas: &quot;He hecho amigos de lugares que no hubiera sabido poner en el mapa&quot;</a></h3>
+            <p>Eduardo Uranga Gayol, de 26 a&#241;os, trabaja en la Oficina Permanente del Gobierno de Navarra ante la Uni&#243;n Europea, donde sigue de cerca la actividad de las instituciones ...</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-26T05:00:00+01:00">05:00 h</time></p>
+          </article>
+
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Economia</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/10/26/once-deja-120-000-euros-pamplona-semana-840094-16.html" target="_blank" rel="noopener">La ONCE deja 120.000 euros en Pamplona este fin de semana</a></h3>
+            <p>Seis compradores tuvieron un premio de 20.000 euros cada uno</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-26T09:58:49+01:00">09:58 h</time></p>
+          </article>
+
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Movilidad</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/10/26/30-euros-multa-circular-bici-patinete-electrico-acera-pamplona-839673-16.html" target="_blank" rel="noopener">30 euros de multa por circular en bici o patinete el&#233;ctrico por la acera en Pamplona</a></h3>
+            <p>Desde el pasado 19 de octubre, los agentes de la Polic&#237;a Municipal ya multan y aplican la reforma del Reglamento General de Circulaci&#243;n en la ciudad</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-26T05:00:00+01:00">05:00 h</time></p>
+          </article>
+
+          <article class="card" data-source="Noticias de Navarra">
+            <p class="eyebrow">Economia</p>
+            <h3><a href="https://www.noticiasdenavarra.com/sociedad/2026/10/26/cupon-semana-once-reparte-pamplona-11686903.html" target="_blank" rel="noopener">El Cup&#243;n Fin de Semana de la ONCE reparte en Pamplona 120.000 euros</a></h3>
+            <p>El Cup&#243;n Fin de Semana de la ONCE ha repartido en Pamplona un total de 120.000 euros, distribuidos en seis cupones agraciados con 20.000 euros cada uno en el sorteo del ...</p>
+            <p class="meta"><span class="source">Noticias de Navarra</span><span class="dot"></span><time datetime="2026-10-26T08:44:28+00:00">08:44 h</time></p>
+          </article>
+
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Osasuna</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/deportes/futbol/osasuna/2026/10/26/revalida-feliz-estreno-llega-batalla-fisica-sanchez-pizjuan-840058-32.html" target="_blank" rel="noopener">La rev&#225;lida de un feliz estreno: llega una batalla f&#237;sica en el S&#225;nchez-Pizju&#225;n</a></h3>
+            <p>El nuevo Osasuna de Jagoba Arrasate calibra su nivel competitivo contra un Sevilla que exigir&#225; el m&#225;ximo</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-26T05:00:00+01:00">05:00 h</time></p>
+          </article>
+
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Actualidad</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/deportes/futbol/osasuna/2026/10/25/promesas-vuelve-tropezar-cataluna-sale-puestos-playoff-840057-32.html" target="_blank" rel="noopener">El Promesas vuelve a tropezar en Catalu&#241;a y sale de los puestos de &#39;playoff&#39;</a></h3>
+            <p>El filial rojillo ha ca&#237;do por 1-0 ante el Espanyol, que ha materializado un penalti</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-25T22:10:05+01:00">25 oct</time></p>
+          </article>
+
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Osasuna</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/deportes/futbol/osasuna/2026/10/25/osasunista-incondicional-sevilla-ver-osasuna-primero-conseguir-entrada-pandemia-840052-32.html" target="_blank" rel="noopener">El osasunista m&#225;s incondicional de Sevilla: &quot;Por ver a Osasuna, fui el primero en conseguir una entrada en la pandemia&quot;</a></h3>
+            <p>Un regalo cuando era ni&#241;o gener&#243; la chispa de la pasi&#243;n de &#193;lvaro Castillo. Este lunes no habr&#225; muchos m&#225;s rojillos en el Pizju&#225;n, hasta el punto de que no se habilitar&#225; la ...</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-25T20:16:20+01:00">25 oct</time></p>
+          </article>
+
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Sucesos</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/10/25/14-anos-pasos-maia-heridas-operaciones-curadas-heridas-sociales-no-cierran-facilmente-836488-16.html" target="_blank" rel="noopener">14 a&#241;os tras los pasos de Maia: &quot;Las heridas de las operaciones ya las tengo curadas, pero las heridas sociales no se cierran tan f&#225;cilmente&quot;</a></h3>
+            <p>Maia Sola Garde, de 25 a&#241;os y nacida con acondroplasia, echa la vista atr&#225;s para recordar su infancia, el proceso de elongaci&#243;n &#243;sea al que se someti&#243; y el camino que la ha ...</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-25T05:00:00+01:00">25 oct</time></p>
+          </article>
+
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Vivienda</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/10/25/1-200-viviendas-vecinos-pamplona-no-quieren-839911-16.html" target="_blank" rel="noopener">Las 1.200 viviendas que vecinos de Pamplona no quieren</a></h3>
+            <p>En seis barrios de la ciudad la promoci&#243;n de pisos ha provocado un movimiento vecinal en contra, la mayor&#237;a por construirse en torres de envergadura y suelo dotacional</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-25T05:00:00+01:00">25 oct</time></p>
+          </article>
+
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Pamplona</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/10/25/50-anos-primer-tanatorio-pamplona-pongan-casa-concejal-839936-16.html" target="_blank" rel="noopener">50 a&#241;os del primer tanatorio de Pamplona: &quot;Que lo pongan en casa de un concejal&quot;</a></h3>
+            <p>El 30 de octubre de 1976 se inaugur&#243; el primer tanatorio, tras la fusi&#243;n de cuatro de las seis funerarias de la ciudad.</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-25T05:00:00+01:00">25 oct</time></p>
+          </article>
+
+        </div>
+        <!-- AUTO:PAMPLONA:END -->
+      </section>
+
+      <!-- ESPAÑA -->
+      <section class="panel" id="espana" role="tabpanel" aria-labelledby="tab-espana" tabindex="-1">
+        <header class="panel-head">
+          <div>
+            <p class="panel-tag">02 · Nacional</p>
+            <h2>España</h2>
+            <p class="panel-intro">Las noticias que marcan la jornada en España.</p>
+          </div>
+          <p class="panel-count" data-count="espana">11 noticias</p>
+        </header>
+
+        <!-- AUTO:ESPANA:START -->
+        <article class="lead" data-source="Diario de Navarra">
+          <p class="lead-label">Lo mas importante</p>
+          <h3><a href="https://www.diariodenavarra.es/noticias/actualidad/nacional/2026/10/26/proxima-dana-afectara-mediterraneo-comunidad-valenciana-principios-noviembre-aemet-840092-28.html" target="_blank" rel="noopener">La pr&#243;xima dana afectar&#225; al Mediterr&#225;neo y la Comunidad Valenciana a principios de noviembre, seg&#250;n Aemet</a></h3>
+          <p>La previsi&#243;n llega despu&#233;s del paso de la dana Adam, que hace dos semanas provoc&#243; inundaciones en las comarcas valencianas de la Safor y la Marina</p>
+          <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-26T09:46:20+01:00">09:46 h</time><span class="dot"></span><span>Tiempo</span></p>
+        </article>
+
+        <div class="grid">
+          <article class="card" data-source="El Pais">
+            <p class="eyebrow">Francia</p>
+            <h3><a href="https://elpais.com/espana/2026-10-26/ultima-hora-de-la-actualidad-politica-en-directo.html" target="_blank" rel="noopener">&#218;ltima hora de la actualidad pol&#237;tica, en directo | El Gobierno condena “sin paliativos” los violentos disturbios en Barcelona y sugiere que benefician a la extrema derecha</a></h3>
+            <p>Albares asegura que los c&#243;nsules trabajan a “toda velocidad para cumplir en plazo los autos del Supremo” | Los partidos y coaliciones apuran el plazo para registrar las ...</p>
+            <p class="meta"><span class="source">El Pais</span><span class="dot"></span><time datetime="2026-10-26T08:52:15+00:00">08:52 h</time></p>
+          </article>
+
+          <article class="card" data-source="El Pais">
+            <p class="eyebrow">Pamplona</p>
+            <h3><a href="https://elpais.com/cultura/2026-10-26/ocho-paseos-para-descubrir-el-nuevo-arte-y-los-barrios-pujantes-de-madrid.html" target="_blank" rel="noopener">Ocho paseos para descubrir el nuevo arte y los barrios pujantes de Madrid</a></h3>
+            <p>Arte Madrid propone ocho itinerarios por 66 galer&#237;as de arte en distintos barrios y localidades de la Comunidad de Madrid.</p>
+            <p class="meta"><span class="source">El Pais</span><span class="dot"></span><time datetime="2026-10-26T08:38:05+00:00">08:38 h</time></p>
+          </article>
+
+          <article class="card" data-source="Noticias de Navarra">
+            <p class="eyebrow">Actualidad</p>
+            <h3><a href="https://www.noticiasdenavarra.com/politica/2026/10/26/gobierno-espanol-garantiza-salario-minimo-11686907.html" target="_blank" rel="noopener">El Gobierno espa&#241;ol garantiza que el salario m&#237;nimo seguir&#225; sin pagar IRPF tras la subida de 2027</a></h3>
+            <p>La portavoz del Gobierno y ministra de Inclusi&#243;n, Seguridad Social y Migraciones, Elma Saiz, ha asegurado que tras la subida del salario m&#237;nimo interprofesional (SMI) para ...</p>
+            <p class="meta"><span class="source">Noticias de Navarra</span><span class="dot"></span><time datetime="2026-10-26T08:36:36+00:00">08:36 h</time></p>
+          </article>
+
+          <article class="card" data-source="El Pais">
+            <p class="eyebrow">Vivienda</p>
+            <h3><a href="https://elpais.com/economia/vivienda/2026-10-26/la-compra-de-vivienda-vuelve-a-crecer-en-agosto-pero-acumula-una-caida-anual-del-23.html" target="_blank" rel="noopener">La compra de vivienda vuelve a crecer en agosto, pero acumula una ca&#237;da anual del 2,3%</a></h3>
+            <p>Ese mes registr&#243; 49.319 operaciones y la firma de hipotecas avanz&#243; un 2,3% interanual, con 33.841 pr&#233;stamos, seg&#250;n el INE</p>
+            <p class="meta"><span class="source">El Pais</span><span class="dot"></span><time datetime="2026-10-26T08:30:57+00:00">08:30 h</time></p>
+          </article>
+
+          <article class="card" data-source="El Pais">
+            <p class="eyebrow">Actualidad</p>
+            <h3><a href="https://elpais.com/icon/2026-10-26/todo-lo-que-hemos-visto-y-aprendido-en-080-barcelona-fashion.html" target="_blank" rel="noopener">Todo lo que hemos visto (y aprendido) en 080 Barcelona Fashion</a></h3>
+            <p>De la moda que mira al huerto a la actualizaci&#243;n del barroco, pasando por las transparencias y la reivindicaci&#243;n de lo cotidiano, repasamos las claves de esta intensa edici&#243;n</p>
+            <p class="meta"><span class="source">El Pais</span><span class="dot"></span><time datetime="2026-10-26T08:30:26+00:00">08:30 h</time></p>
+          </article>
+
+          <article class="card" data-source="Noticias de Navarra">
+            <p class="eyebrow">Economia</p>
+            <h3><a href="https://www.noticiasdenavarra.com/mundo/2026/10/26/spacex-cierra-acuerdo-40-000-11686877.html" target="_blank" rel="noopener">SpaceX cierra un acuerdo de 40.000 millones de d&#243;lares en deuda para adquirir chips para IA</a></h3>
+            <p>El conglomerado tecnol&#243;gico y aeroespacial SpaceX, fundado y dirigido por Elon Musk, se ha asegurado financiaci&#243;n mediante deuda por importe de 40.000 millones de d&#243;lares ...</p>
+            <p class="meta"><span class="source">Noticias de Navarra</span><span class="dot"></span><time datetime="2026-10-26T08:25:58+00:00">08:25 h</time></p>
+          </article>
+
+          <article class="card" data-source="El Pais">
+            <p class="eyebrow">Elecciones</p>
+            <h3><a href="https://elpais.com/economia/2026-10-26/elma-saiz-asegura-que-el-gobierno-aprobara-otra-deduccion-para-que-el-salario-minimo-no-tribute-en-el-irpf.html" target="_blank" rel="noopener">Elma Saiz asegura que el Gobierno aprobar&#225; otra deducci&#243;n para que el salario m&#237;nimo no tribute en el IRPF</a></h3>
+            <p>La portavoz y ministra de Seguridad Social insiste en que el Ejecutivo quiere aprobar la subida del SMI antes de las elecciones</p>
+            <p class="meta"><span class="source">El Pais</span><span class="dot"></span><time datetime="2026-10-26T08:23:18+00:00">08:23 h</time></p>
+          </article>
+
+          <article class="card" data-source="Noticias de Navarra">
+            <p class="eyebrow">Elecciones</p>
+            <h3><a href="https://www.noticiasdenavarra.com/opinion/2026/10/26/cambio-guardia-11686836.html" target="_blank" rel="noopener">Cambio de guardia</a></h3>
+            <p>Tras una d&#233;cada de dominio del Partido Republicano, parece que el signo pol&#237;tico va a cambiar en favor de los Dem&#243;cratas en las elecciones norteamericanas de la pr&#243;xima ...</p>
+            <p class="meta"><span class="source">Noticias de Navarra</span><span class="dot"></span><time datetime="2026-10-26T08:19:49+00:00">08:19 h</time></p>
+          </article>
+
+          <article class="card" data-source="El Mundo">
+            <p class="eyebrow">Empleo</p>
+            <h3><a href="https://www.elmundo.es/economia/dinero-inversion/2026/10/26/6adf0b5bfdddff98418b458f.html" target="_blank" rel="noopener">Telef&#243;nica se desploma un 8% en la bolsa tras la victoria de Lula en Brasil y Santander pierde un 5%</a></h3>
+            <p>La reelecci&#243;n del candidato del Partido de los Trabajadores ha supuesto un duro varapalo a las empresas espa&#241;olas con fuerte exposici&#243;n all&#237; Leer</p>
+            <p class="meta"><span class="source">El Mundo</span><span class="dot"></span><time datetime="2026-10-26T09:17:42+01:00">09:17 h</time></p>
+          </article>
+
+          <article class="card" data-source="Noticias de Navarra">
+            <p class="eyebrow">Tiempo</p>
+            <h3><a href="https://www.noticiasdenavarra.com/sucesos/2026/10/26/herido-grave-nino-8-anos-11686850.html" target="_blank" rel="noopener">Herido grave un ni&#241;o de 8 a&#241;os al electrocutarse en una atracci&#243;n de feria en Toledo</a></h3>
+            <p>Un ni&#241;o de ocho a&#241;os resultaba herido grave este domingo tras electrocutarse al bajar de una atracci&#243;n de feria en la localidad toledana de Consuegra.</p>
+            <p class="meta"><span class="source">Noticias de Navarra</span><span class="dot"></span><time datetime="2026-10-26T08:13:35+00:00">08:13 h</time></p>
+          </article>
+
+        </div>
+        <!-- AUTO:ESPANA:END -->
+      </section>
+
+      <!-- MUNDIAL -->
+      <section class="panel" id="mundial" role="tabpanel" aria-labelledby="tab-mundial" tabindex="-1">
+        <header class="panel-head">
+          <div>
+            <p class="panel-tag">03 · Internacional</p>
+            <h2>Mundial</h2>
+            <p class="panel-intro">Una mirada a los principales acontecimientos internacionales.</p>
+          </div>
+          <p class="panel-count" data-count="mundial">11 noticias</p>
+        </header>
+
+        <!-- AUTO:MUNDIAL:START -->
+        <article class="lead" data-source="Diario de Navarra">
+          <p class="lead-label">Lo mas importante</p>
+          <h3><a href="https://www.diariodenavarra.es/noticias/actualidad/internacional/2026/10/26/francia-afronta-nueva-semana-movilizaciones-sociales-caceroladas-protestas-840084-29.html" target="_blank" rel="noopener">Francia afronta nueva semana de movilizaciones sociales con caceroladas y protestas</a></h3>
+          <p>Adem&#225;s, varios sindicatos mantienen una convocatoria de huelga y manifestaciones para el 5 de noviembre</p>
+          <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-26T07:52:33+01:00">07:52 h</time><span class="dot"></span><span>Francia</span></p>
+        </article>
+
+        <div class="grid">
+          <article class="card" data-source="Diario de Navarra">
+            <p class="eyebrow">Elecciones</p>
+            <h3><a href="https://www.diariodenavarra.es/noticias/actualidad/internacional/2026/10/26/lula-gana-elecciones-remontada-flavio-bolsonaro-impugnara-resultado-840082-29.html" target="_blank" rel="noopener">Lula gana las elecciones de remontada ante un Fl&#225;vio Bolsonaro que impugnar&#225; el resultado</a></h3>
+            <p>Este resultado signific&#243; una in&#233;dita y sorprendente remontada en relaci&#243;n al resultado de la primera vuelta</p>
+            <p class="meta"><span class="source">Diario de Navarra</span><span class="dot"></span><time datetime="2026-10-26T07:25:30+01:00">07:25 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Elecciones</p>
+            <h3><a href="https://www.rtve.es/noticias/20261026/machirulos-israel-desaparicion-mujeres-primera-linea-politica/17272504.shtml" target="_blank" rel="noopener">Machirulos en Israel: la desaparici&#243;n de las mujeres de la primera l&#237;nea pol&#237;tica</a></h3>
+            <p>Las elecciones del 27 de octubre en Israel van a ser las m&#225;s importantes en sus 78 a&#241;os de historia.</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-26T07:15:00+01:00">07:15 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Ucrania</p>
+            <h3><a href="https://www.rtve.es/noticias/20261026/ammar-yassir-mirada-joven-sudan/17282578.shtml" target="_blank" rel="noopener">Ammar Yassir, la mirada joven de la guerra de Sud&#225;n: &quot;&#39;Guerra olvidada&#39; me parece despectivo; mejor &#39;guerra desatendida&#39;&quot;</a></h3>
+            <p>Ammar es fotoperiodista y ha documentado en primera persona el &#233;xodo sudan&#233;s. Desde abril de 2023, la guerra en Sud&#225;n ha provocado la mayor crisis de desplazados del mundo</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-26T07:15:00+01:00">07:15 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Elecciones</p>
+            <h3><a href="https://www.rtve.es/noticias/20261025/israel-elecciones-cruciales-inciertas/17279812.shtml" target="_blank" rel="noopener">Israel, ante unas elecciones cruciales e inciertas marcadas por el 7 de octubre</a></h3>
+            <p>Ni el bando pro ni el anti Netanyahu lograr&#237;an mayor&#237;a, lo que da la llave del gobierno a los partidos &#225;rabes.</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-26T07:12:00+01:00">07:12 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Mundo</p>
+            <h3><a href="https://www.rtve.es/noticias/20261026/voto-arabe-israel-fuerza-minoria-incomoda/17282549.shtml" target="_blank" rel="noopener">El voto &#225;rabe en Israel: la fuerza de la minor&#237;a inc&#243;moda</a></h3>
+            <p>Los partidos &#225;rabes representan a una quinta parte de la poblaci&#243;n israel&#237;. Despreciados por los partidos jud&#237;os, son clave en el futuro de Netanyahu</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-26T07:12:00+01:00">07:12 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Ucrania</p>
+            <h3><a href="https://www.rtve.es/noticias/20261026/nicki-minaj-sube-avion-presidencial-acompana-trump-mitin-michigan/17282943.shtml" target="_blank" rel="noopener">La rapera Nicki Minaj sube al avi&#243;n presidencial y acompa&#241;a a Donald Trump a un mitin en Michigan</a></h3>
+            <p>Con este mit&#237;n, Trump ha buscado impulsar la candidatura de Mike Rogers. En enero de este a&#241;o, Minaj asegur&#243; haber recibido gratuitamente una &quot;tarjeta dorada&quot; de Trump</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-26T06:02:52+01:00">06:02 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Mundo</p>
+            <h3><a href="https://www.rtve.es/noticias/20261026/huties-anuncian-lanzamiento-misil-contra-aeropuerto-internacional-riad/17282941.shtml" target="_blank" rel="noopener">Los hut&#237;es anuncian el lanzamiento de un misil contra el aeropuerto internacional de Riad</a></h3>
+            <p>Yahya Saree ha afirmado que el grupo lanz&#243; &quot;con &#233;xito&quot; un misil contra el aeropuerto. El portavoz hut&#237; tambi&#233;n ha reivindicado un ataque con drones y misiles</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-26T05:43:10+01:00">05:43 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Elecciones</p>
+            <h3><a href="https://www.rtve.es/noticias/20261026/presidente-tribunal-electoral-brasileno-critica-extension-horario-votacion/17282938.shtml" target="_blank" rel="noopener">El presidente del tribunal electoral brasile&#241;o critica la extensi&#243;n del horario de votaci&#243;n</a></h3>
+            <p>Nunes Marques ha advertido que esta medida ha generado &quot;dificultades&quot; t&#233;cnicas. Lula da Silva gana las elecciones de Brasil y logra su cuarto mandato</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-26T05:24:59+01:00">05:24 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Empleo</p>
+            <h3><a href="https://www.rtve.es/noticias/20261026/lula-silva-historico-sindicalista-presidencia-brasil-por-cuarta-vez/17281154.shtml" target="_blank" rel="noopener">Lula, el hist&#243;rico sindicalista que sac&#243; de la pobreza a millones de brasile&#241;os, gana la presidencia por cuarta vez</a></h3>
+            <p>El l&#237;der del Partido de los Trabajadores se ha impuesto a Bolsonaro con un 51,76% de los votos.</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-26T01:26:04+01:00">01:26 h</time></p>
+          </article>
+
+          <article class="card" data-source="RTVE">
+            <p class="eyebrow">Elecciones</p>
+            <h3><a href="https://www.rtve.es/noticias/20261025/elecciones-brasil-2026-resultados-ultima-hora-ganador-cronica/17282786.shtml" target="_blank" rel="noopener">Lula da Silva gana las elecciones de Brasil y logra su cuarto mandato: &quot;Este pa&#237;s no va a ser el patio trasero de nadie&quot;</a></h3>
+            <p>Fl&#225;vio Bolsonaro, que ha perdido por cuatro millones de votos, no reconoce los resultados. Es la primera vez en el pa&#237;s que un candidato que pierde la primera vuelta gana la ...</p>
+            <p class="meta"><span class="source">RTVE</span><span class="dot"></span><time datetime="2026-10-25T23:41:11+01:00">25 oct</time></p>
+          </article>
+
+        </div>
+        <!-- AUTO:MUNDIAL:END -->
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="https://pamplona.fesofiabarat.es/wp-content/uploads/yootheme/cache/bb/Solo-Logo-Mediano-bba5bf9a.webp" alt="" width="20" height="20">
+        <div>
+          <p class="footer-title">Hoy en Pamplona</p>
+          <p class="footer-note">Proyecto para el profesorado y el cuarto de hora, inspirado en la web del <a href="https://pamplona.fesofiabarat.es" target="_blank" rel="noopener">Colegio Sagrado Corazón Pamplona</a>.</p>
+        </div>
+      </div>
+      <div class="footer-sources">
+        <p class="footer-note">Titulares y enlaces pertenecen a <a href="https://www.diariodenavarra.es" target="_blank" rel="noopener">Diario de Navarra</a>, <a href="https://www.rtve.es/noticias/" target="_blank" rel="noopener">RTVE</a>, <a href="https://www.elmundo.es" target="_blank" rel="noopener">El Mundo</a>, <a href="https://elpais.com" target="_blank" rel="noopener">El País</a> y <a href="https://www.noticiasdenavarra.com" target="_blank" rel="noopener">Noticias de Navarra</a>. Cada noticia se lee en su fuente original.</p>
+        <p class="footer-note" id="edition-close">Edicion cerrada el 26 de octubre de 2026 a las 10:00 h. Las noticias evolucionan a lo largo del dia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+		(() => {
+	  "use strict";
+
+	  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+	  const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+	  const ids = panels.map((panel) => panel.id);
+	  const baseTitle = document.title;
+
+	  if (!tabs.length || !panels.length) return;
+
+	  const isValid = (id) => ids.includes(id);
+
+	  function activate(id, options = {}) {
+		const { focusTab = false, updateHistory = false, scroll = false, setTitle = true } = options;
+		if (!isValid(id)) return;
+
+		tabs.forEach((tab) => {
+		  const selected = tab.getAttribute("aria-controls") === id;
+		  tab.setAttribute("aria-selected", String(selected));
+		  tab.tabIndex = selected ? 0 : -1;
+		});
+
+		panels.forEach((panel) => {
+		  const selected = panel.id === id;
+		  panel.classList.toggle("is-active", selected);
+		});
+
+		const activeTab = tabs.find((tab) => tab.getAttribute("aria-controls") === id);
+		const activePanel = document.getElementById(id);
+
+		if (focusTab && activeTab) activeTab.focus();
+
+		if (updateHistory) {
+		  try {
+			history.pushState({ tab: id }, "", `#${id}`);
+		  } catch (error) {
+			// file:// puede bloquear pushState; la navegación sigue funcionando.
+		  }
+		}
+
+		if (scroll && activePanel) {
+		  const header = document.querySelector(".site-header");
+		  const offset = (header ? header.offsetHeight : 80) + 4;
+		  const y = window.scrollY + activePanel.getBoundingClientRect().top - offset;
+		  window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+		}
+
+		if (setTitle) {
+		  const label = activeTab ? activeTab.textContent.trim().replace(/\s+\d+$/, "") : "";
+		  document.title = label ? `${label} · ${baseTitle}` : baseTitle;
+		}
+	  }
+
+	  tabs.forEach((tab, index) => {
+		tab.addEventListener("click", (event) => {
+		  event.preventDefault();
+		  activate(tab.getAttribute("aria-controls"), {
+			updateHistory: true,
+			scroll: true,
+		  });
+		});
+
+		tab.addEventListener("keydown", (event) => {
+		  let next = null;
+
+		  if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+		  if (event.key === "ArrowLeft") next = (index - 1 + tabs.length) % tabs.length;
+		  if (event.key === "Home") next = 0;
+		  if (event.key === "End") next = tabs.length - 1;
+
+		  if (next !== null) {
+			event.preventDefault();
+			const target = tabs[next];
+			activate(target.getAttribute("aria-controls"), {
+			  focusTab: true,
+			  updateHistory: true,
+			});
+		  }
+		});
+	  });
+
+	  window.addEventListener("popstate", () => {
+		const id = window.location.hash.slice(1);
+		activate(isValid(id) ? id : ids[0]);
+	  });
+
+	  const fromHash = window.location.hash.slice(1);
+	  activate(isValid(fromHash) ? fromHash : ids[0], { setTitle: false });
+
+	  // La portada siempre recibe al lector; el hash solo se escribe al navegar.
+	  if (!fromHash) {
+		window.scrollTo(0, 0);
+	  }
+	})();
+
+	// ---------- Filtro por fuente ----------
+	(() => {
+	  "use strict";
+	  const select = document.getElementById("source-filter");
+	  if (!select) return;
+
+	  function applyFilter() {
+		const value = select.value;
+		const cards = document.querySelectorAll("[data-source]");
+		cards.forEach((card) => {
+		  card.style.display =
+			value === "all" || card.getAttribute("data-source") === value
+			  ? ""
+			  : "none";
+		});
+	  }
+
+	  select.addEventListener("change", applyFilter);
+
+	  // Al cambiar de pestaña, reaplicar el filtro a la nueva pestaña visible.
+	  document.querySelectorAll('[role="tab"]').forEach((tab) => {
+		tab.addEventListener("click", () => setTimeout(applyFilter, 50));
+	  });
+
+	  // Aplicar al cargar (por si el navegador restaura el valor del select).
+	  applyFilter();
+	})();
+  </script>
+  <script>
+    // Registro del service worker (permite instalar la app y verla sin conexion)
+    if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js").catch(function () {});
+      });
+    }
+  </script>
+</body>
+</html>

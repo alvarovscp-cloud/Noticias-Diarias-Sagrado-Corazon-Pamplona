@@ -1,0 +1,93 @@
+HOY EN PAMPLONA - GUIA PARA PUBLICARLO GRATIS EN GITHUB
+=========================================================
+
+Que hay en esta carpeta
+-----------------------
+index.html                      La pagina de noticias (con los marcadores AUTO que rellena el script)
+update-news.ps1                 El actualizador (ya corregido, ver "Cambios" al final)
+EJECUTAR_Noticias_Diarias.bat   Sigue funcionando en un Windows del colegio, como siempre
+manifest.webmanifest, sw.js     Lo que convierte la pagina en una app instalable
+icon-*.png, apple-touch-icon.png  Iconos de la app (PROVISIONALES, ver paso 6)
+.github/workflows/...           La tarea que actualiza y publica las noticias cada manana
+
+IMPORTANTE: si en tu carpeta original existen fonts.css, styles.css o una carpeta de
+fuentes/imagenes, copialos tambien a esta carpeta antes de subirla (no estaban entre
+los archivos que me enviaste). Sin ellos la pagina se ve, pero puede cambiar la tipografia.
+
+
+PASOS (una sola vez, unos 15 minutos)
+-------------------------------------
+1. Crea tu cuenta en https://github.com (gratis). Verifica el correo.
+
+2. Pulsa "+" (arriba a la derecha) > "New repository".
+   - Nombre: por ejemplo  hoy-en-pamplona
+   - Visibilidad: PUBLIC (necesario para que GitHub Pages sea gratuito)
+   - Pulsa "Create repository".
+
+3. En la pantalla del repositorio vacio, pulsa "uploading an existing file"
+   y arrastra TODO el contenido de esta carpeta (los archivos y la carpeta .github).
+   Abajo, pulsa "Commit changes".
+   * Si la carpeta .github no se sube (Windows la trata como oculta): pulsa
+     "Add file" > "Create new file", escribe como nombre exactamente
+         .github/workflows/actualizar-noticias.yml
+     (al escribir las barras se crean las carpetas), pega dentro el contenido del archivo
+     de esta carpeta y pulsa "Commit changes".
+
+4. Activa la publicacion: "Settings" > "Pages" > en "Source" elige "GitHub Actions".
+
+5. Lanza la primera edicion: pestana "Actions" > "Actualizar noticias y publicar" >
+   "Run workflow". Tarda 2-3 minutos. Cuando termine con el tic verde, tu direccion sera:
+       https://TU-USUARIO.github.io/hoy-en-pamplona/
+   (tambien aparece en Settings > Pages)
+
+6. (Opcional) Cambia los iconos: sustituye icon-192.png, icon-512.png,
+   icon-maskable-512.png y apple-touch-icon.png por el escudo del colegio, manteniendo
+   los mismos nombres y tamanos (192, 512, 512 y 180 pixeles, cuadrados y sin transparencia).
+   Para cambiar un archivo: ábrelo en GitHub > icono del lapiz/"..." > "Delete" y sube el nuevo,
+   o usa "Add file" > "Upload files" con el mismo nombre.
+
+
+INSTALARLO EN LOS DISPOSITIVOS
+------------------------------
+Android y Chromebook: abrir la direccion en Chrome > menu (tres puntos) > "Instalar aplicacion"
+  (o "Anadir a pantalla de inicio").
+iPhone / iPad: abrir la direccion en SAFARI > boton Compartir > "Anadir a pantalla de inicio".
+  (Tiene que ser Safari; desde otros navegadores de iPhone no aparece esa opcion en todas las versiones.)
+Ordenador Windows/Mac: en Chrome o Edge, icono de instalar en la barra de direcciones.
+
+Puedes pasar la direccion a los profesores por un codigo QR (por ejemplo con un generador gratuito).
+
+
+COMO FUNCIONA CADA DIA
+----------------------
+De lunes a viernes, GitHub ejecuta solo update-news.ps1 dos veces (aprox. 06:30-07:30 y 08:30-09:30
+hora de Pamplona; GitHub puede retrasarlo unos minutos), genera la edicion y la publica.
+Las apps instaladas muestran siempre la ultima edicion al abrirse con conexion, y la ultima
+guardada si no la hay.
+Para cambiar horarios: edita .github/workflows/actualizar-noticias.yml (lineas "cron"; hora UTC).
+Para forzar una actualizacion: Actions > "Actualizar noticias y publicar" > "Run workflow".
+
+
+SI ALGO FALLA
+-------------
+- Si una edicion falla (por ejemplo, un periodico cambia su web), la pagina anterior sigue
+  publicada y GitHub te envia un correo. En Actions > pulsa la ejecucion en rojo para ver el mensaje.
+- Si pasan semanas sin ninguna actividad en el repositorio, GitHub puede pausar las tareas
+  programadas: en Actions aparecera un boton "Enable workflow" para reactivarlas.
+- Las RSS marcadas en update-news.ps1 pueden cambiar de direccion con el tiempo; las que fallen
+  se omiten sin romper el resto.
+
+
+TEN EN CUENTA
+-------------
+La pagina sera publica: cualquiera con el enlace podra verla. Muestra titulares, resumen corto y
+enlace a cada medio, con sus nombres en el pie. Evita ampliar los resumenes a textos largos.
+
+
+CAMBIOS REALIZADOS EN TUS ARCHIVOS
+----------------------------------
+update-news.ps1: nuevo parametro -NoOpen (no abre el navegador; lo usa GitHub);
+  corregida la codificacion mezclada (dos lineas estaban en Latin-1 y los nombres Baranain,
+  Ansoain, Noain se leian mal); guardado en UTF-8 con BOM. El resto no se ha tocado.
+index.html: anadidas las lineas del manifest, el icono de iPhone y el registro del service worker.
+  El contenido y el diseno no se han tocado.
