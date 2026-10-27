@@ -8,6 +8,7 @@ on:
     - cron: "30 6 * * *"   # 7:30 en invierno (8:30 en verano)
     - cron: "0 6 * * *"    # 8:00 en verano  (7:00 en invierno)
     - cron: "0 7 * * *"    # 8:00 en invierno (9:00 en verano)
+    - cron: "0 11 * * *"    # 12:00 en invierno (13:00 en verano)
   workflow_dispatch:
   push:
     branches: [main]
